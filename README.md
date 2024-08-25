@@ -1,7 +1,7 @@
 # Investment calculator
 
-<p>This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.0-next.2.</p>
-<p>Exercise suggestion from Udemy course [Angular - The Complete Guide (2024 Edition)](https://www.udemy.com/course/the-complete-guide-to-angular-2) about the Angular basics.</p>
+<p>This project was generated with <a href="https://github.com/angular/angular-cli">Angular CLI</a> version 18.0.0-next.2.</p>
+<p>Exercise suggestion from Udemy course <a href="https://www.udemy.com/course/the-complete-guide-to-angular-2">Angular - The Complete Guide (2024 Edition)</a> about the Angular basics.</p>
 <p>The function that generates the investment values was implemented by the course instructor (Maximilian Schwarzmüller) because it is outside of my area of expertise, but I created the rest of the code and integrated this function into my code.</p>
 
 ## Development server
