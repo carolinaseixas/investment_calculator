@@ -1,0 +1,64 @@
+<section>
+    <form (ngSubmit)="onSubmit()">
+        <div>
+            <div class="input">
+                <label for="initial-investment">Initial investment</label>
+                <input type="number" min="0.01" name="initial-investment" 
+                        id="initial-investment" required [(ngModel)]="initialInvestment" 
+                        #initial="ngModel">
+                @if(initial.invalid && (initial.dirty || initial.touched)){
+                    <div>
+                        @if(initial.hasError('required')){<div class="alert">Required value.</div>}
+                        @if(initial.hasError('min')){<div class="alert">Value must be greater than 0.</div>}
+                    </div>
+                }
+            </div>
+
+            <div class="input">
+                <label for="annual-investment">Annual investment</label>
+                <input type="number" min="0" name="annual-investment" 
+                        id="annual-investment" required [(ngModel)]="annualInvestment"  
+                        #annual="ngModel">
+                @if(annual.invalid && (annual.dirty || annual.touched)){
+                    <div>
+                        @if(annual.hasError('required')){<div class="alert">Required value.</div>}
+                        @if(annual.hasError('min')){<div class="alert">Value must be 0 or more.</div>}
+                    </div>
+                }
+            </div>
+        </div>
+
+        <div>
+            <div class="input">
+                <label for="expected-return">Expected return</label>
+                <input type="number" min="0" name="expected-return" 
+                        id="expected-return" required [(ngModel)]="expectedReturn"  
+                        #expected="ngModel">
+                @if(expected.invalid && (expected.dirty || expected.touched)){
+                    <div>
+                        @if(expected.hasError('required')){<div class="alert">Required value.</div>}
+                        @if(expected.hasError('min')){<div class="alert">Value must be 0 or more.</div>}
+                    </div>
+                }
+            </div>
+
+            <div class="input">
+                <label for="duration">Duration</label>
+                <input type="number" min="1" step="1" name="duration" 
+                        id="duration" required [(ngModel)]="duration"  #years="ngModel">
+                @if(years.invalid && (years.dirty || years.touched)){
+                    <div>
+                        @if(years.hasError('required')){<div class="alert">Required value.</div>}
+                        @if(years.hasError('min')){<div class="alert">Value must be 1 or more.</div>}
+                    </div>
+                }
+            </div>
+        </div>
+
+        <button type="submit" 
+                [disabled]="initial.errors || annual.errors || expected.errors || years.errors"
+        >
+            Calculate
+        </button>
+    </form>
+</section>

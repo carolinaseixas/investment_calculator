@@ -1,6 +1,7 @@
 import { Injectable } from "@angular/core";
-import type { InvestmentData } from "../investment-input.model";
-import type { InvestmentResults } from "./investment-results.model";
+
+import type { InvestmentData } from "./shared/models/investment-input.model";
+import type { InvestmentResults } from "./shared/models/investment-results.model";
 
 @Injectable({providedIn: 'root'})
 export class InvestmentResultsService{
