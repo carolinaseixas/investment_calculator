@@ -16,17 +16,16 @@ export class UserInputComponent {
   annualInvestment = '0';
   expectedReturn = '1000';
   duration = '10';
-  investmentResults = output<InvestmentResults[]>();
 
   constructor(private investmentResultsService: InvestmentResultsService) {}
 
   onSubmit(){
-    this.investmentResults.emit(this.investmentResultsService.calculateInvestmentResults(
+    this.investmentResultsService.calculateInvestmentResults(
       {initialInvestment: +this.initialInvestment, 
         duration: +this.duration, 
         expectedReturn: +this.expectedReturn, 
         annualInvestment: +this.annualInvestment
       }
-    ));
+    );
   }
 }

@@ -1,3 +1,7 @@
+.center{
+  text-align:center;
+}
+
 .results-table{
     display: flex;
     flex-direction: column;
